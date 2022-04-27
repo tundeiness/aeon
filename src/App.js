@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 border border-red-700">
       <div className="top-matter border border-white px-2">
-        <div className="forgot-password px-12 mx-12">
-          <p className="text-center text-white px-10">Aeon Brand</p>
+        <div className="forgot-password px-12 mx-12 border border-red-900 mb-10">
+          <p className="text-center text-white px-10 mb-10">Aeon Brand</p>
         </div>
-        <div className="copyright px-12 mx-12">
+        <div className="copyright px-12 mx-12 border border-red-900 mt-5 mb-10">
           <p className="text-center font-bold text-white px-12">Welcome!</p>
         </div>
       </div>
