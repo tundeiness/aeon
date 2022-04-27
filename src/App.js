@@ -8,8 +8,15 @@ import { CgCopyright } from 'react-icons/cg';
 
 function App() {
   return (
-    <div className="App flex justify-center flex-col items-center h-screen w-screen bg-slate-800 border border-red-700">
-      <p className="text-center font-bold text-white w-[29rem]">Welcome!</p>
+    <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 border border-red-700">
+      <div className="top-matter border border-white px-2">
+        <div className="forgot-password px-12 mx-12">
+          <p className="text-center text-white px-10">Aeon Brand</p>
+        </div>
+        <div className="copyright px-12 mx-12">
+          <p className="text-center font-bold text-white px-12">Welcome!</p>
+        </div>
+      </div>
 
       <div className="border border-red-800">
         {/* <p className="text-center font-bold text-white">Welcome!</p> */}
@@ -96,11 +103,11 @@ function App() {
       </div>
       <div className="bottom-matter border border-white">
         <div className="forgot-password px-10 mx-12">
-          <a className="inline-block px-10" href="./">
+          <a className="inline-block px-10 text-white" href="./">
             Forgot password?
           </a>
         </div>
-        <div className="copyright px-10 mx-12">
+        <div className="copyright px-10 mx-12 text-white">
           <p className="brand flex uppercase px-10">
             <CgCopyright className="mt-1" />
             credequity
