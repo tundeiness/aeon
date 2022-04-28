@@ -89,7 +89,7 @@ const App = () => {
               autoComplete="off"
             />
             {formic.touched.email && formic.errors.email && (
-              <span className="text-red-300 text-xs pt-1 ml-10">{formic.errors.email}</span>
+              <span className="text-red-300 text-xs ml-10">{formic.errors.email}</span>
             )}
           </div>
 
