@@ -56,7 +56,7 @@ const App = () => {
 
       <div className="w-full flex justify-center  pt-4 pb-6">
         <form
-          className="bg-amber  w-auto rounded-lg bg-white"
+          className="bg-amber  w-auto rounded-lg bg-slate-100"
           onSubmit={formic.handleSubmit}
         >
           <div className="form_top-matter text-center mt-12 mb-8">
