@@ -42,21 +42,22 @@ const App = () => {
     },
   });
   return (
-    <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 ">
-      <div className="top-matter  px-2">
-        <div className="forgot-password px-12 mx-12 mb-12 mt-5">
-          <p className="text-center text-white px-10 pb-10">Aeon Brand</p>
+    <div className="App flex justify-center h-screen w-screen bg-slate-800">
+      <div className="content-container flex flex-col justify-center items-center border border-red-700">
+        <div className="top-matter  px-2">
+          <div className="forgot-password px-12 mx-12 mb-12 mt-5">
+            <p className="text-center text-white px-10 pb-10">Aeon Brand</p>
+          </div>
+          <div className="salutation px-12 mx-12 mt-5 mb-5">
+            <p className="text-center font-bold text-white px-4 text-3xl">
+              Welcome!
+            </p>
+          </div>
         </div>
-        <div className="salutation px-12 mx-12 mt-5 mb-5">
-          <p className="text-center font-bold text-white px-4 text-3xl">
-            Welcome!
-          </p>
-        </div>
-      </div>
 
-      <div className="w-full flex justify-center  pt-4 pb-6">
+        {/* <div className="w-full flex justify-center px-10 pt-4 pb-6"> */}
         <form
-          className="bg-amber  w-auto rounded-lg bg-slate-100"
+          className="bg-amber  w-auto rounded-lg bg-slate-100 mb-4"
           onSubmit={formic.handleSubmit}
         >
           <div className="form_top-matter text-center mt-12 mb-8">
@@ -89,7 +90,9 @@ const App = () => {
               autoComplete="off"
             />
             {formic.touched.email && formic.errors.email && (
-              <span className="text-red-300 text-xs ml-10">{formic.errors.email}</span>
+              <span className="text-red-300 text-xs ml-10">
+                {formic.errors.email}
+              </span>
             )}
           </div>
 
@@ -130,18 +133,19 @@ const App = () => {
           </div>
         </form>
 
-      </div>
-      <div className="bottom-matter flex flex-col justify-between">
-        <div className="forgot-password px-10 mx-12 pb-10 mb-7">
-          <a className="inline-block px-10 text-sm text-slate-200" href="./">
-            Forgot password?
-          </a>
-        </div>
-        <div className="copyright px-10 mx-12 text-slate-400 text-sm pt-10 mt-10">
-          <p className="brand flex uppercase px-10">
-            <CgCopyright className="mt-1" />
-            credequity
-          </p>
+        {/* </div> */}
+        <div className="bottom-matter flex flex-col justify-between h-full">
+          <div className="forgot-password px-10 mx-12 pb-12 mb-12">
+            <a className="inline-block px-10 text-sm text-slate-200" href="./">
+              Forgot password?
+            </a>
+          </div>
+          <div className="copyright px-10 mx-12 text-slate-400 text-sm pt-12 mb-2 mt-12">
+            <p className="brand flex uppercase px-10">
+              <CgCopyright className="mt-1" />
+              credequity
+            </p>
+          </div>
         </div>
       </div>
     </div>
