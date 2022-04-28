@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -5,9 +7,40 @@ import './App.css';
 import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
-// import { Formik, Field, Form, ErrorMessage } from "formik";
+import {
+  Formik, Field, Form, ErrorMessage, useFormik,
+} from 'formik';
 
-function App() {
+const App = () => {
+  const handleSubmit = (values) => {
+    consol.log(values);
+  };
+
+  const validate = (value) => {
+    const errors = {};
+    // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!value.email) {
+      errors.email = 'Cannot be blank';
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = 'Invalid email format';
+    }
+
+    return errors;
+  };
+
+  const formic = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(`You have loggedin succesfully! Email: ${values.email}`);
+    },
+  });
   return (
     <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 border border-red-700">
       <div className="top-matter  px-2">
@@ -22,12 +55,26 @@ function App() {
       </div>
 
       <div className="w-full flex justify-center  pt-4 pb-6">
-        <form className="bg-amber  w-auto rounded-lg bg-white">
+        {/* <>
+          <Formik
+            initialValues={{
+              email: '',
+              password: '',
+            }}
+            onSubmit={handleSubmit}
+            validationSchema={loginSchema}
+          > */}
+        <form
+          className="bg-amber  w-auto rounded-lg bg-white"
+          onSubmit={formic.handleSubmit}
+        >
           <div className="form_top-matter text-center mt-12 mb-8">
-            <p className="text-slate-400 text-sm">Sign in with your credentials</p>
+            <p className="text-slate-400 text-sm">
+              Sign in with your credentials
+            </p>
           </div>
 
-          <div className="mb-5 email-block relative focus-within:text-gray-600 mx-5">
+          <div className="mb-5 email-block relative focus-within:text-gray-600 mx-5 flex flex-col">
             <HiMail className="w-5 h-5 absolute ml-12 mt-4 text-gray-400 pointer-events-none" />
             {/* <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -36,15 +83,26 @@ function App() {
                   Email
                 </label> */}
             <input
-              className="shadow appearance-none border rounded  py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10"
+              className={`shadow appearance-none border rounded  py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10 ${
+                formic.email && formic.errors.email
+                  ? 'border-red-400'
+                  : 'border-gray-300'
+              }`}
+              onChange={formic.handleChange}
+              onBlur={formic.handleBlur}
+              value={formic.values.email}
               id="email"
+              name="email"
               type="email"
               placeholder="Email"
               autoComplete="off"
             />
+            {formic.touched.email && formic.errors.email && (
+              <span className="text-red-400 text-xs pt-1 ml-10">{formic.errors.email}</span>
+            )}
           </div>
 
-          <div className="mb-5 password-block mx-5">
+          <div className="mb-5 password-block mx-5 flex flex-col">
             <GiPadlockOpen className="w-5 h-5 absolute ml-12 mt-4 text-gray-400 pointer-events-none" />
             {/* <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -53,11 +111,22 @@ function App() {
               Password
             </label> */}
             <input
-              className="shadow appearance-none border rounded w-96 mx-10 py-4 pl-9 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={`shadow appearance-none border rounded w-96 mx-10 py-4 pl-9 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                formic.password && formic.errors.password
+                  ? 'border-red-400'
+                  : 'border-gray-300'
+              }`}
+              onChange={formic.handleChange}
+              onBlur={formic.handleBlur}
+              value={formic.values.password}
               id="password"
+              name="password"
               type="text"
               placeholder="Password"
             />
+            {formic.touched.password && formic.errors.password && (
+              <span className="text-red-400">{formic.errors.password}</span>
+            )}
           </div>
 
           <div className="px-4 pb-8 flex justify-center my-2">
@@ -69,7 +138,8 @@ function App() {
             </button>
           </div>
         </form>
-
+        {/* </Formik>
+        </> */}
       </div>
       <div className="bottom-matter flex flex-col justify-between">
         <div className="forgot-password px-10 mx-12 pb-10 mb-8">
@@ -83,10 +153,9 @@ function App() {
             credequity
           </p>
         </div>
-
       </div>
     </div>
   );
-}
+};
 
 export default App;
