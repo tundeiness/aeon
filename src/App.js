@@ -12,9 +12,9 @@ import {
 } from 'formik';
 
 const App = () => {
-  const handleSubmit = (values) => {
-    consol.log(values);
-  };
+  // const handleSubmit = (values) => {
+  //   consol.log(values);
+  // };
 
   const validate = (value) => {
     const errors = {};
@@ -42,7 +42,7 @@ const App = () => {
     },
   });
   return (
-    <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 border border-red-700">
+    <div className="App flex flex-col items-center h-screen w-screen bg-slate-800 ">
       <div className="top-matter  px-2">
         <div className="forgot-password px-12 mx-12 mb-12 mt-5">
           <p className="text-center text-white px-10 pb-10">Aeon Brand</p>
@@ -55,15 +55,6 @@ const App = () => {
       </div>
 
       <div className="w-full flex justify-center  pt-4 pb-6">
-        {/* <>
-          <Formik
-            initialValues={{
-              email: '',
-              password: '',
-            }}
-            onSubmit={handleSubmit}
-            validationSchema={loginSchema}
-          > */}
         <form
           className="bg-amber  w-auto rounded-lg bg-white"
           onSubmit={formic.handleSubmit}
@@ -86,7 +77,7 @@ const App = () => {
               className={`shadow appearance-none border rounded  py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10 ${
                 formic.email && formic.errors.email
                   ? 'border-red-400'
-                  : 'border-gray-300'
+                  : 'border-gray-100'
               }`}
               onChange={formic.handleChange}
               onBlur={formic.handleBlur}
@@ -98,7 +89,7 @@ const App = () => {
               autoComplete="off"
             />
             {formic.touched.email && formic.errors.email && (
-              <span className="text-red-400 text-xs pt-1 ml-10">{formic.errors.email}</span>
+              <span className="text-red-300 text-xs pt-1 ml-10">{formic.errors.email}</span>
             )}
           </div>
 
@@ -113,8 +104,8 @@ const App = () => {
             <input
               className={`shadow appearance-none border rounded w-96 mx-10 py-4 pl-9 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 formic.password && formic.errors.password
-                  ? 'border-red-400'
-                  : 'border-gray-300'
+                  ? 'border-red-300'
+                  : 'border-gray-100'
               }`}
               onChange={formic.handleChange}
               onBlur={formic.handleBlur}
@@ -138,11 +129,10 @@ const App = () => {
             </button>
           </div>
         </form>
-        {/* </Formik>
-        </> */}
+
       </div>
       <div className="bottom-matter flex flex-col justify-between">
-        <div className="forgot-password px-10 mx-12 pb-10 mb-8">
+        <div className="forgot-password px-10 mx-12 pb-10 mb-7">
           <a className="inline-block px-10 text-sm text-slate-200" href="./">
             Forgot password?
           </a>
