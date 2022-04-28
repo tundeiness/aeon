@@ -74,7 +74,7 @@ const App = () => {
                   Email
                 </label> */}
             <input
-              className={`shadow appearance-none border rounded  py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10 ${
+              className={`shadow appearance-none border rounded mb-1 py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10 ${
                 formic.email && formic.errors.email
                   ? 'border-red-400'
                   : 'border-gray-100'
