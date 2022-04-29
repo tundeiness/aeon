@@ -125,7 +125,7 @@ const App = () => {
 
             <div className="px-4 flex justify-center my-2 pt-5 pb-10">
               <button
-                className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
+                className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 capitalize font-bold text-white hover:text-black sm:w[60%]"
                 type="button"
               >
                 Login
