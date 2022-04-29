@@ -12,9 +12,9 @@ import {
 } from 'formik';
 
 const App = () => {
-  // const handleSubmit = (values) => {
-  //   consol.log(values);
-  // };
+  const handleSubmit = (values) => {
+    consol.log(values);
+  };
 
   const validate = (value) => {
     const errors = {};
@@ -23,7 +23,7 @@ const App = () => {
     if (!value.email) {
       errors.email = 'Cannot be blank';
     } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value.email)
     ) {
       errors.email = 'Invalid email format';
     }
@@ -42,112 +42,108 @@ const App = () => {
     },
   });
 
+  console.log(formic.values);
+
   return (
     <div className="App flex justify-center h-screen w-screen bg-slate-800">
-      <div className="w-full md:w-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden border border-red-700">
-        {/* <div className="top-matter border border-white flex flex-col justify-between h-1/3">
-          <div className="forgot-password px-12 mx-12 ">
-            <p className="text-center text-white px-10">Aeon Brand</p>
-          </div>
-          <div className="salutation px-12 mx-12">
-            <p className="text-center font-bold text-white px-4 text-3xl">
-              Welcome!
-            </p>
-          </div>
-        </div> */}
-
+      <div className="max-w-md w-full mx-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden min-h-screen">
         {/* <div className="w-full flex justify-center px-10 pt-4 pb-6"> */}
-        <form
-          className="rounded-lg bg-slate-100 mb-4"
-          onSubmit={formic.handleSubmit}
-        >
-          <div className="form_top-matter text-center mt-12">
+        <div className="flex flex-col justify-between max-w-md w-full max-h-md h-full">
+          <div className="max-w-md w-full mx-auto">
+            <p className="text-white text-center">Aeon Brand</p>
+          </div>
+          <div className="max-w-md w-full mx-auto pb-10">
+            <p className="text-white text-3xl text-center">Welcome!</p>
+          </div>
+        </div>
+
+        <div className="max-w-md w-full mx-auto rounded-lg  px-8  bg-slate-100">
+          <div className="form_top-matter text-center pt-10 pb-6">
             <p className="text-slate-400 text-sm">
               Sign in with your credentials
             </p>
           </div>
-
-          <div className="mb-5 email-block relative focus-within:text-gray-600 mx-5 flex flex-col">
-            <HiMail className="w-5 h-5 absolute ml-12 mt-4 text-gray-400 pointer-events-none" />
-            {/* <label
+          <form action="" className="space-y-1" onSubmit={formic.handleSubmit}>
+            <div className="email-block relative h-20">
+              <HiMail className="w-4 h-4 absolute ml-2 mt-[5%] text-gray-400 pointer-events-none" />
+              {/* <label
                   className="block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="email"
                 >
                   Email
                 </label> */}
-            <input
-              className={`shadow appearance-none border rounded mb-1 py-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-96 mx-10 ${
-                formic.email && formic.errors.email
-                  ? 'border-red-400'
-                  : 'border-gray-100'
-              }`}
-              onChange={formic.handleChange}
-              onBlur={formic.handleBlur}
-              value={formic.values.email}
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Email"
-              autoComplete="off"
-            />
-            {formic.touched.email && formic.errors.email && (
-              <span className="text-red-300 text-xs ml-10">
-                {formic.errors.email}
-              </span>
-            )}
-          </div>
+              <input
+                className={`shadow appearance-none border rounded mt-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus-within:text-gray-600 w-full pl-8 py-3 ${
+                  formic.email && formic.errors.email
+                    ? 'border-red-400'
+                    : 'border-gray-100'
+                }`}
+                onChange={formic.handleChange}
+                onBlur={formic.handleBlur}
+                value={formic.values.email}
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                autoComplete="off"
+              />
+              {formic.touched.email && formic.errors.email && (
+                <span className="text-red-300 text-xs">
+                  {formic.errors.email}
+                </span>
+              )}
+            </div>
 
-          <div className="mb-5 password-block mx-5 flex flex-col">
-            <GiPadlockOpen className="w-5 h-5 absolute ml-12 mt-4 text-gray-400 pointer-events-none" />
-            {/* <label
+            <div className="password-block relative">
+              <GiPadlockOpen className="w-4 h-4 absolute ml-2 mt-[3.5%] text-gray-400 pointer-events-none" />
+              {/* <label
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="password"
             >
               Password
             </label> */}
-            <input
-              className={`shadow appearance-none border rounded w-96 mx-10 py-4 pl-9 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                formic.password && formic.errors.password
-                  ? 'border-red-300'
-                  : 'border-gray-100'
-              }`}
-              onChange={formic.handleChange}
-              onBlur={formic.handleBlur}
-              value={formic.values.password}
-              id="password"
-              name="password"
-              type="text"
-              placeholder="Password"
-            />
-            {formic.touched.password && formic.errors.password && (
-              <span className="text-red-400">{formic.errors.password}</span>
-            )}
-          </div>
+              <input
+                className={`shadow appearance-none border rounded w-full pl-8 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  formic.password && formic.errors.password
+                    ? 'border-red-300'
+                    : 'border-gray-100'
+                }`}
+                onChange={formic.handleChange}
+                onBlur={formic.handleBlur}
+                value={formic.values.password}
+                id="password"
+                name="password"
+                type="text"
+                placeholder="Password"
+              />
+              {formic.touched.password && formic.errors.password && (
+                <span className="text-red-400">{formic.errors.password}</span>
+              )}
+            </div>
 
-          <div className="px-4 flex justify-center my-2">
-            <button
-              className="px-6 py-3 bg-blue-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
-              type="button"
-            >
-              Login
-            </button>
-          </div>
-        </form>
-
-        {/* </div> */}
-        {/* <div className="bottom-matter flex flex-col justify-between h-2/3">
-          <div className="forgot-password px-10 mx-12 pb-12 mb-12">
+            <div className="px-4 flex justify-center my-2 pt-5 pb-10">
+              <button
+                className="px-6 py-3 bg-blue-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
+                type="button"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="flex flex-col justify-between max-h-md h-full">
+          <div className="max-w-md w-full mx-auto pt-4">
             <a className="inline-block px-10 text-sm text-slate-200" href="./">
               Forgot password?
             </a>
           </div>
-          <div className="copyright px-10 mx-12 text-slate-400 text-sm pt-12 mb-2 mt-12">
-            <p className="brand flex uppercase px-10">
+          <div className="max-w-md w-full mx-auto">
+            <p className="brand flex uppercase px-10 text-sm text-slate-500">
               <CgCopyright className="mt-1" />
               credequity
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
