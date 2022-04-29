@@ -41,26 +41,27 @@ const App = () => {
       alert(`You have loggedin succesfully! Email: ${values.email}`);
     },
   });
+
   return (
     <div className="App flex justify-center h-screen w-screen bg-slate-800">
-      <div className="content-container flex flex-col justify-center items-center border border-red-700">
-        <div className="top-matter  px-2">
-          <div className="forgot-password px-12 mx-12 mb-12 mt-5">
-            <p className="text-center text-white px-10 pb-10">Aeon Brand</p>
+      <div className="w-full md:w-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden border border-red-700">
+        {/* <div className="top-matter border border-white flex flex-col justify-between h-1/3">
+          <div className="forgot-password px-12 mx-12 ">
+            <p className="text-center text-white px-10">Aeon Brand</p>
           </div>
-          <div className="salutation px-12 mx-12 mt-5 mb-5">
+          <div className="salutation px-12 mx-12">
             <p className="text-center font-bold text-white px-4 text-3xl">
               Welcome!
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* <div className="w-full flex justify-center px-10 pt-4 pb-6"> */}
         <form
-          className="bg-amber  w-auto rounded-lg bg-slate-100 mb-4"
+          className="rounded-lg bg-slate-100 mb-4"
           onSubmit={formic.handleSubmit}
         >
-          <div className="form_top-matter text-center mt-12 mb-8">
+          <div className="form_top-matter text-center mt-12">
             <p className="text-slate-400 text-sm">
               Sign in with your credentials
             </p>
@@ -123,7 +124,7 @@ const App = () => {
             )}
           </div>
 
-          <div className="px-4 pb-8 flex justify-center my-2">
+          <div className="px-4 flex justify-center my-2">
             <button
               className="px-6 py-3 bg-blue-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
               type="button"
@@ -134,7 +135,7 @@ const App = () => {
         </form>
 
         {/* </div> */}
-        <div className="bottom-matter flex flex-col justify-between h-full">
+        {/* <div className="bottom-matter flex flex-col justify-between h-2/3">
           <div className="forgot-password px-10 mx-12 pb-12 mb-12">
             <a className="inline-block px-10 text-sm text-slate-200" href="./">
               Forgot password?
@@ -146,7 +147,7 @@ const App = () => {
               credequity
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
