@@ -45,7 +45,7 @@ const App = () => {
   console.log(formic.values);
 
   return (
-    <div className="App flex justify-center h-screen w-screen bg-slate-800">
+    <div className="App flex justify-center min-h-full w-screen bg-slate-800 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full mx-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden min-h-screen">
         {/* <div className="w-full flex justify-center px-10 pt-4 pb-6"> */}
         <div className="flex flex-col justify-between max-w-md w-full max-h-md h-full">
@@ -65,7 +65,7 @@ const App = () => {
           </div>
           <form action="" className="space-y-1" onSubmit={formic.handleSubmit}>
             <div className="email-block relative h-20">
-              <HiMail className="w-4 h-4 absolute ml-2 mt-[5%] text-gray-400 pointer-events-none" />
+              <HiMail className="envelope w-4 h-4 absolute ml-2 mt-[5%] text-gray-400 pointer-events-none" />
               {/* <label
                   className="block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="email"
@@ -73,6 +73,7 @@ const App = () => {
                   Email
                 </label> */}
               <input
+                required
                 className={`shadow appearance-none border rounded mt-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus-within:text-gray-600 w-full pl-8 py-3 ${
                   formic.email && formic.errors.email
                     ? 'border-red-400'
@@ -95,7 +96,7 @@ const App = () => {
             </div>
 
             <div className="password-block relative">
-              <GiPadlockOpen className="w-4 h-4 absolute ml-2 mt-[3.5%] text-gray-400 pointer-events-none" />
+              <GiPadlockOpen className="padlock w-4 h-4 absolute ml-2 mt-[3.5%] text-gray-400 pointer-events-none" />
               {/* <label
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="password"
@@ -103,6 +104,7 @@ const App = () => {
               Password
             </label> */}
               <input
+                required
                 className={`shadow appearance-none border rounded w-full pl-8 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                   formic.password && formic.errors.password
                     ? 'border-red-300'
@@ -123,7 +125,7 @@ const App = () => {
 
             <div className="px-4 flex justify-center my-2 pt-5 pb-10">
               <button
-                className="px-6 py-3 bg-blue-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
+                className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 uppercase font-bold text-white hover:text-black sm:w[60%]"
                 type="button"
               >
                 Login

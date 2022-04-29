@@ -9,3 +9,13 @@
 .brand{
   font-size: 12px;
 }
+
+@media screen and (max-width:425px){
+  .padlock{
+    margin-top: 0.8rem;
+  }
+
+  .envelope{
+    margin-top: 1.15rem;
+  }
+}
