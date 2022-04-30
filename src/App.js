@@ -47,7 +47,6 @@ const App = () => {
   return (
     <div className="App flex justify-center min-h-full w-screen bg-slate-800 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full mx-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden min-h-screen">
-        {/* <div className="w-full flex justify-center px-10 pt-4 pb-6"> */}
         <div className="flex flex-col justify-between max-w-md w-full max-h-md h-full">
           <div className="max-w-md w-full mx-auto">
             <p className="text-white text-center">Aeon Brand</p>
