@@ -11,6 +11,8 @@ import {
   Formik, Field, Form, ErrorMessage, useFormik,
 } from 'formik';
 
+import { Suspense } from 'react';
+
 const App = () => {
   const handleSubmit = (values) => {
     consol.log(values);
