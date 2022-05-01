@@ -12,6 +12,7 @@ import {
 } from 'formik';
 
 import { Suspense } from 'react';
+// import { Link } from 'react-router-dom';
 
 const App = () => {
   const handleSubmit = (values) => {
@@ -128,6 +129,7 @@ const App = () => {
               <button
                 className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 capitalize font-bold text-white hover:text-black sm:w[60%]"
                 type="button"
+                href="/home"
               >
                 Login
               </button>
