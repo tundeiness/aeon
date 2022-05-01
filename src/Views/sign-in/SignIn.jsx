@@ -4,6 +4,7 @@ import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   const handleSubmit = (values) => {
@@ -118,6 +119,7 @@ const SignIn = () => {
               <button
                 className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 capitalize font-bold text-white hover:text-black sm:w[60%]"
                 type="button"
+                to="/home"
               >
                 Login
               </button>

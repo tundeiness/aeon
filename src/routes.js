@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
-const SignInView = lazy(() => import('./Views/sign-in/SignIn'));
-// const SignUpView = lazy(() => import("./views/sign-up/sign-up"));
+// import { useRoutes } from 'react-router-dom';
+// const SignUpView = lazy(() => import('./views/sign-up/sign-up'));
 // const ForgotView = lazy(() =>
 //   import("./views/forgot-password/forgot-password")
 // );
@@ -15,6 +15,8 @@ const SignInView = lazy(() => import('./Views/sign-in/SignIn'));
 // const PersonalInfoView = lazy(() =>
 //   import("./views/profile-view/profile-personal-info/personal-info")
 // );
+
+const SignInView = lazy(() => import('./Views/sign-in/SignIn'));
 
 const routes = [
   {
@@ -78,16 +80,56 @@ const routes = [
   //   exact: true,
   //   component: ProfileView,
   //   protected: true,
-  //   routes: [
+  //   childRoutes: [
   //     {
-  //       title: "Personal",
-  //       path: "/profile/personal-info",
-  //       exact: true,
-  //       component: PersonalInfoView,
-  //       protected: true,
+  //       path: "news",
+  //       components: { header: Header, sidebar: Sidebar },
   //     },
   //   ],
   // },
 ];
+
+// const routes = useRoutes([
+// { path: '/', element: <SignInView /> },
+// {
+//   path: '/invoices',
+//   element: <Invoices />,
+//   children: [
+//     { path: ':id', element: <Invoice /> },
+//     { path: '/pending', element: <Pending /> },
+//     { path: '/complete', element: <Complete /> },
+//   ],
+// },
+// {
+//   path: '/users',
+//   element: <Users />,
+//   children: [
+//     { path: ':id', element: <Profile /> },
+//     { path: '/settings', element: <Settings /> },
+//   ],
+// },
+// ]);
+
+// You can declare this in `App.js`, but it might
+// be better to move it to its own file.
+
+// const routes = [
+//   {
+//     path: '/',
+//     component: SignInView,
+//   },
+//   {
+//     path: '/Teachers',
+//     component: TeacherListPage,
+//   },
+//   {
+//     path: '/Teachers/:teacherId',
+//     component: TeacherPage,
+//   },
+//   {
+//     path: '/Teachers/:teacherId/Classes',
+//     component: TaughtClassesPage,
+//   },
+// ];
 
 export default routes;
