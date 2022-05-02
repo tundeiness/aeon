@@ -16,78 +16,78 @@ import { lazy } from 'react';
 //   import("./views/profile-view/profile-personal-info/personal-info")
 // );
 
-const SignInView = lazy(() => import('./Views/sign-in/SignIn'));
+// const SignInView = lazy(() => import('./Views/sign-in/SignIn'));
 
-const routes = [
-  {
-    title: 'Sign In',
-    path: '/',
-    exact: true,
-    component: SignInView,
-    protected: false,
-  },
+// const routes = [
+//   {
+//     title: 'Sign In',
+//     path: '/',
+//     exact: true,
+//     component: SignInView,
+//     protected: false,
+//   },
 
-  // {
-  //   title: "Sign Up",
-  //   path: "/sign-up",
-  //   exact: true,
-  //   component: SignUpView,
-  //   protected: false,
-  // },
+// {
+//   title: "Sign Up",
+//   path: "/sign-up",
+//   exact: true,
+//   component: SignUpView,
+//   protected: false,
+// },
 
-  // {
-  //   title: "Forgot Password",
-  //   path: "/forgot-password",
-  //   exact: true,
-  //   component: ForgotView,
-  //   protected: false,
-  // },
+// {
+//   title: "Forgot Password",
+//   path: "/forgot-password",
+//   exact: true,
+//   component: ForgotView,
+//   protected: false,
+// },
 
-  // {
-  //   title: "Reset Password",
-  //   path: "/reset-password/:token",
-  //   exact: true,
-  //   component: ResetView,
-  //   protected: false,
-  // },
+// {
+//   title: "Reset Password",
+//   path: "/reset-password/:token",
+//   exact: true,
+//   component: ResetView,
+//   protected: false,
+// },
 
-  // {
-  //   title: "Setup Business",
-  //   path: "/setup-business",
-  //   exact: true,
-  //   component: SetupBusinessView,
-  //   protected: false,
-  // },
+// {
+//   title: "Setup Business",
+//   path: "/setup-business",
+//   exact: true,
+//   component: SetupBusinessView,
+//   protected: false,
+// },
 
-  // {
-  //   title: "Otp",
-  //   path: "/otp",
-  //   exact: true,
-  //   component: OtpView,
-  //   protected: false,
-  // },
+// {
+//   title: "Otp",
+//   path: "/otp",
+//   exact: true,
+//   component: OtpView,
+//   protected: false,
+// },
 
-  // {
-  //   title: "Secure Account",
-  //   path: "/secure-account",
-  //   exact: true,
-  //   component: SecureView,
-  //   protected: false,
-  // },
-  // {
-  //   title: "Profile",
-  //   path: "/profile",
-  //   exact: true,
-  //   component: ProfileView,
-  //   protected: true,
-  //   childRoutes: [
-  //     {
-  //       path: "news",
-  //       components: { header: Header, sidebar: Sidebar },
-  //     },
-  //   ],
-  // },
-];
+// {
+//   title: "Secure Account",
+//   path: "/secure-account",
+//   exact: true,
+//   component: SecureView,
+//   protected: false,
+// },
+// {
+//   title: "Profile",
+//   path: "/profile",
+//   exact: true,
+//   component: ProfileView,
+//   protected: true,
+//   childRoutes: [
+//     {
+//       path: "news",
+//       components: { header: Header, sidebar: Sidebar },
+//     },
+//   ],
+// },
+// ];
 
 // const routes = useRoutes([
 // { path: '/', element: <SignInView /> },
@@ -132,4 +132,46 @@ const routes = [
 //   },
 // ];
 
-export default routes;
+import { useRoutes } from 'react-router-dom';
+
+// import AuthLayout from './layouts/AuthLayout';
+// import MainLayout from './layouts/MainLayout';
+// import Home from './pages/Home'
+// import About from './pages/About'
+// import Login from './pages/Login'
+// import SignUp from './pages/Signup'
+const LoginView = lazy(() => import('./Views/sign-in/SignIn'));
+
+const AppRouter = () => {
+  const element = useRoutes([
+    {
+      path: '/',
+      element: <LoginView />,
+    },
+    // {
+    //   path: "/discover",
+    //   element: <Discover />,
+    // },
+    // {
+    //   path: "*",
+    //   element: <NotFound />,
+    // },
+    // {
+    //   element: <LoginView />,
+    //   children: [
+    //     { path: '/', element: <LoginView /> },
+    //     //  { path: "signup", element: <SignUp /> },
+    //   ],
+    // },
+    // {
+    //     element: <MainLayout />,
+    //     children: [
+    //         { path: "home", element: <Home /> },
+    //         { path: "about", element: <About /> },
+    //     ],
+    // },
+  ]);
+  return element;
+};
+export default AppRouter;
+// export default routes;
