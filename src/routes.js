@@ -174,4 +174,3 @@ const AppRouter = () => {
   return element;
 };
 export default AppRouter;
-// export default routes;
