@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { Suspense } from 'react';
+import React from 'react';
 import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
