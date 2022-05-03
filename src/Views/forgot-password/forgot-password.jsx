@@ -34,8 +34,8 @@ function Forgotpassword() {
 
   console.log(formic.values);
   return (
-    <div className="App flex justify-center min-h-full w-screen bg-slate-800 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full mx-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden min-h-screen">
+    <div className="App flex justify-center min-h-full w-screen bg-slate-800 px-2 sm:px-6 lg:px-8">
+      <div className="max-w-lg w-full mx-auto content-container flex flex-col justify-center items-center overflow-y-hidden overflow-x-hidden min-h-screen">
         <div className="flex flex-col justify-between max-w-md w-full max-h-md h-full">
           <div className="max-w-md w-full mx-auto">
             <p className="text-white text-center">Aeon Brand</p>
@@ -45,21 +45,15 @@ function Forgotpassword() {
           </div>
         </div>
 
-        <div className="max-w-md w-full mx-auto rounded-lg  px-8  bg-slate-100">
+        <div className="max-w-lg w-full mx-auto rounded-lg  bg-slate-100">
           <div className="form_top-matter text-center pt-10 pb-6">
             <p className="text-slate-400 text-sm">
               Enter the email you were profiled with to reset your password
             </p>
           </div>
           <form action="" className="space-y-1" onSubmit={formic.handleSubmit}>
-            <div className="email-block relative h-20">
-              <HiMail className="envelope w-4 h-4 absolute ml-2 mt-[5%] text-gray-400 pointer-events-none" />
-              {/* <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="email"
-                >
-                  Email
-                </label> */}
+            <div className="email-block relative h-20 px-8">
+              <HiMail className="envelope w-4 h-4 absolute ml-2 mt-[3.5%] text-gray-400 pointer-events-none" />
               <input
                 required
                 className={`shadow appearance-none border rounded mt-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus-within:text-gray-600 w-full pl-8 py-3 ${
@@ -94,13 +88,8 @@ function Forgotpassword() {
             </div>
           </form>
         </div>
-        <div className="flex flex-col justify-between max-h-md h-full">
-          {/* <div className="max-w-md w-full mx-auto pt-4">
-            <a className="inline-block px-10 text-sm text-slate-200" href="./">
-              Forgot password?
-            </a>
-          </div> */}
-          <div className="max-w-md w-full mx-auto pt-4">
+        <div className="flex flex-col justify-center items-center max-h-md h-full">
+          <div className="max-w-md w-full mx-auto">
             <p className="brand flex uppercase px-10 text-sm text-slate-500">
               <CgCopyright className="mt-1" />
               credequity
