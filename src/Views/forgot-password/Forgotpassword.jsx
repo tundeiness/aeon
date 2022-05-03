@@ -43,7 +43,7 @@ function Forgotpassword() {
             <p className="text-white text-center">Aeon Brand</p>
           </div>
           <div className="max-w-md w-full mx-auto pb-10">
-            <p className="text-white text-3xl text-center">Welcome!</p>
+            <p className="text-white text-3xl text-center">Forgot Password?</p>
           </div>
         </div>
 
