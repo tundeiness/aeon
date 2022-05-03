@@ -4,7 +4,7 @@ import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
 import { useFormik } from 'formik';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   const handleSubmit = (values) => {
@@ -128,9 +128,13 @@ const SignIn = () => {
         </div>
         <div className="flex flex-col justify-between max-h-md h-full">
           <div className="max-w-md w-full mx-auto pt-4">
-            <a className="inline-block px-10 text-sm text-slate-200" href="./">
+
+            <Link
+              className="forgot-password-link inline-block px-10 text-sm text-slate-200"
+              to="/src/Views/forgot-password/Forgotpassword.jsx"
+            >
               Forgot password?
-            </a>
+            </Link>
           </div>
           <div className="max-w-md w-full mx-auto">
             <p className="brand flex uppercase px-10 text-sm text-slate-500">
