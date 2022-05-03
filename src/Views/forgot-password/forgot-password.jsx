@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Suspense } from 'react';
 import { HiMail } from 'react-icons/hi';
-import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
 import {
   useFormik,
@@ -26,7 +25,6 @@ function Forgotpassword() {
   const formic = useFormik({
     initialValues: {
       email: '',
-      password: '',
     },
     validate,
     onSubmit: (values) => {
@@ -50,7 +48,7 @@ function Forgotpassword() {
         <div className="max-w-md w-full mx-auto rounded-lg  px-8  bg-slate-100">
           <div className="form_top-matter text-center pt-10 pb-6">
             <p className="text-slate-400 text-sm">
-              Sign in with your credentials
+              Enter the email you were profiled with to reset your password
             </p>
           </div>
           <form action="" className="space-y-1" onSubmit={formic.handleSubmit}>
@@ -85,52 +83,24 @@ function Forgotpassword() {
               )}
             </div>
 
-            <div className="password-block relative">
-              <GiPadlockOpen className="padlock w-4 h-4 absolute ml-2 mt-[3.5%] text-gray-400 pointer-events-none" />
-              {/* <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="password"
-            >
-              Password
-            </label> */}
-              <input
-                required
-                className={`shadow appearance-none border rounded w-full pl-8 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                  formic.password && formic.errors.password
-                    ? 'border-red-300'
-                    : 'border-gray-100'
-                }`}
-                onChange={formic.handleChange}
-                onBlur={formic.handleBlur}
-                value={formic.values.password}
-                id="password"
-                name="password"
-                type="text"
-                placeholder="Password"
-              />
-              {formic.touched.password && formic.errors.password && (
-                <span className="text-red-400">{formic.errors.password}</span>
-              )}
-            </div>
-
             <div className="px-4 flex justify-center my-2 pt-5 pb-10">
               <button
                 className="px-6 py-3 bg-indigo-500 border border-slate-400 rounded-md hover:bg-slate-500 capitalize font-bold text-white hover:text-black sm:w[60%]"
                 type="button"
                 href="/home"
               >
-                Login
+                Reset
               </button>
             </div>
           </form>
         </div>
         <div className="flex flex-col justify-between max-h-md h-full">
-          <div className="max-w-md w-full mx-auto pt-4">
+          {/* <div className="max-w-md w-full mx-auto pt-4">
             <a className="inline-block px-10 text-sm text-slate-200" href="./">
               Forgot password?
             </a>
-          </div>
-          <div className="max-w-md w-full mx-auto">
+          </div> */}
+          <div className="max-w-md w-full mx-auto pt-4">
             <p className="brand flex uppercase px-10 text-sm text-slate-500">
               <CgCopyright className="mt-1" />
               credequity
