@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
@@ -8,17 +8,24 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const handleForgotPassword = () => {
-    navigate('/forgot-password');
-  };
+  // const handleForgotPassword = () => {
+  //   navigate('/forgot-password');
+  // };
   const handleSubmit = (values) => {
     console.log(values);
   };
 
+  const changeLocation = (placeToGo) => {
+    navigate(placeToGo);
+    // window.location.reload();
+  };
+
+  // useEffect(() => {
+  //   console.log('Current location is', location);
+  // }, [navigate]);
+
   const validate = (value) => {
     const errors = {};
-    // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-
     if (!value.email) {
       errors.email = 'Cannot be blank';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value.email)) {
@@ -27,6 +34,8 @@ const SignIn = () => {
 
     return errors;
   };
+
+  // useEffect(() )
 
   const formic = useFormik({
     initialValues: {
@@ -135,6 +144,8 @@ const SignIn = () => {
             <Link
               className="forgot-password-link inline-block px-10 text-sm text-slate-200"
               to="/forgot-password"
+              onClick={() => navigate('/forgot-password')}
+              forceRefresh
             >
               Forgot password?
             </Link>
