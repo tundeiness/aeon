@@ -4,9 +4,13 @@ import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
 import { useFormik } from 'formik';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  const handleForgotPassword = () => {
+    navigate('/forgot-password');
+  };
   const handleSubmit = (values) => {
     console.log(values);
   };
@@ -128,16 +132,16 @@ const SignIn = () => {
         </div>
         <div className="flex flex-col justify-between max-h-md h-full">
           <div className="max-w-md w-full mx-auto pt-4">
-
             <Link
               className="forgot-password-link inline-block px-10 text-sm text-slate-200"
-              to="/Forgotpassword"
+              to="/forgot-password"
             >
               Forgot password?
             </Link>
+            {/* <Navigate to="/forgot-password"> Forgot password?</Navigate> */}
           </div>
           <div className="max-w-md w-full mx-auto">
-            <p className="brand flex uppercase px-10 text-sm text-slate-500">
+            <p className="brand flex uppercase px-12 text-sm text-slate-500">
               <CgCopyright className="mt-1" />
               credequity
             </p>

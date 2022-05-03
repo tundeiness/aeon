@@ -141,7 +141,7 @@ import { useRoutes } from 'react-router-dom';
 // import Login from './pages/Login'
 // import SignUp from './pages/Signup'
 const LoginView = lazy(() => import('./Views/sign-in/SignIn'));
-const ForgotPasswordView = lazy(() => import('./Views/forgot-password/Forgotpassword'));
+const ForgotPasswordView = lazy(() => import('./Views/forgot-password/forgot-password'));
 
 const AppRouter = () => {
   const element = useRoutes([
@@ -150,8 +150,10 @@ const AppRouter = () => {
       element: <LoginView />,
     },
     {
-      path: '/Forgotpassword',
+      path: '/forgot-password',
+      exact: true,
       element: <ForgotPasswordView />,
+      component: ForgotPasswordView,
     },
     // {
     //   path: "*",
