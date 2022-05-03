@@ -131,7 +131,7 @@ const SignIn = () => {
 
             <Link
               className="forgot-password-link inline-block px-10 text-sm text-slate-200"
-              to="/src/Views/forgot-password/Forgotpassword.jsx"
+              to="../forgot-password/Forgotpassword.jsx"
             >
               Forgot password?
             </Link>
