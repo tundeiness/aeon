@@ -26,7 +26,6 @@ const AppRouter = () => {
       path: '/forgot-password',
       exact: true,
       element: <ForgotPasswordView />,
-      component: ForgotPasswordView,
       protected: false,
     },
     // {
