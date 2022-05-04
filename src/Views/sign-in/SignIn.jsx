@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HiMail } from 'react-icons/hi';
 import { GiPadlockOpen } from 'react-icons/gi';
 import { CgCopyright } from 'react-icons/cg';
@@ -7,6 +8,11 @@ import { useFormik } from 'formik';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+  const [goToForgotPassword, setGoToForgotPassword] = useState(false);
+
+  if (goToForgotPassword) {
+    return <Navigate to="/forgot-password" />;
+  }
   const navigate = useNavigate();
   // const handleForgotPassword = () => {
   //   navigate('/forgot-password');
@@ -144,7 +150,10 @@ const SignIn = () => {
             <Link
               className="forgot-password-link inline-block px-10 text-sm text-slate-200"
               to="/forgot-password"
-              // onClick={() => navigate('/forgot-password')}
+              // onClick={() => { navigate('/forgot-password'); }}
+              // onClick={() => {
+              //   setGoToForgotPassword(true);
+              // }}
             >
               Forgot password?
             </Link>

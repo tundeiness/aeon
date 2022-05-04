@@ -7,7 +7,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './App.css';
 // import { HiMail } from 'react-icons/hi';
-// import { Routes, Route, Link } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 // import { GiPadlockOpen } from 'react-icons/gi';
 // import { CgCopyright } from 'react-icons/cg';
 // import {
@@ -16,17 +17,22 @@ import './App.css';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Suspense } from 'react';
 // import routes from './Routes';
-import Router from './Routes';
-// import SignIn from './Views/sign-in/SignIn';
 
-// import { Link } from 'react-router-dom';
+import routes from './Routes';
 
 const App = () => {
-  // console.log(Route);
   const test = 0;
   return (
     <>
-      <Router />
+      {/* <Router /> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route) => (
+            <Route key={route.id} {...route} />
+          ))}
+          {/* <Route path="*" component={NotFound} /> */}
+        </Routes>
+      </Suspense>
     </>
   );
 };
