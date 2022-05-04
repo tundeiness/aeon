@@ -144,7 +144,7 @@ const SignIn = () => {
             <Link
               className="forgot-password-link inline-block px-10 text-sm text-slate-200"
               to="/forgot-password"
-              onClick={() => navigate('/forgot-password')}
+              // onClick={() => navigate('/forgot-password')}
             >
               Forgot password?
             </Link>
