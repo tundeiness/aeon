@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
@@ -11,13 +12,24 @@ import './signin.css';
 
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
+import LandingImage from '../../static/assets/img/landing-image.png';
 
 const SignIn = () => {
   const test = 0;
   return (
-    <main className="sign-in flex flex-col justify-between h-screen outline outline-red-800">
-      <article className="text-black flex lg:flex-row md:flex-col gap-2 outline outline-blue-600">
-        <section className="form-aside outline outline-red-800 md:mx-auto md:max-w-md lg:max-w-full w-full md:w-1/2 xl:w-1/2 max-h-screen mb-20 pb-10">
+    <main className="container">
+      <article className="article-matter flex flex-col md:flex-row h-screen items-center">
+        <section className="login-section w-full md:w-1/2">
+          <div className="w-full h-100">
+            <h1>Log in</h1>
+            <p>Form section</p>
+          </div>
+        </section>
+
+        <section className="banner-section h-screen hidden md:w-1/2 lg:block">
+          <img src={LandingImage} alt="landing" className="w-full h-full object-cover" />
+        </section>
+        {/* <section className="form-aside outline outline-red-800 md:mx-auto md:max-w-md lg:max-w-full w-full md:w-1/2 xl:w-1/2 max-h-screen mb-20 pb-10">
           <div className="logo-container flex justify-center outline outline-red-800 my-20">
             <img src={AeonLogo} alt="aeon-logo" className="w-22 h-16" />
           </div>
@@ -66,10 +78,10 @@ const SignIn = () => {
             </div>
 
             <div className="bottom-block flex flex-row text-center outline outline-red-600 lg:mx-10 lg:px-10 lg:mb-10">
-              <div className="hidden md:flex md:flex-row">
+              <div className="flex md:hidden flex-row ">
                 <input id="remember" className="mb-4" type="checkbox" />
                 <label
-                  className="label block text-gray-500 text-sm font-bold mb-2"
+                  className="label block text-gray-500 text-xs font-bold mb-2"
                   htmlFor="remember"
                 >
                   Remember for 30 days
@@ -96,12 +108,12 @@ const SignIn = () => {
 
         <section className="hidden lg:block md:w-1/2 welcome-aside outline outline-red-800">
           <p>This is the welcome image section</p>
-        </section>
+        </section> */}
       </article>
-      <footer className="hidden lg:flex  text-black outline outline-black py-2">
+      <footer className="footer-matter">
         {' '}
         <CgCopyright className="mt-1" />
-        <p>Credequity</p>
+        <span>Credequity</span>
       </footer>
     </main>
   );
