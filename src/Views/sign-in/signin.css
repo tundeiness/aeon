@@ -3,14 +3,31 @@
   line-height: 20px;
 }
 
+
+/* .logo-container > img{
+  width: 16rem;
+  height: 4rem;
+} */
+
+.sign-in{
+  /* height: 100vh!important; */
+  
+}
+
 .sign-in-button{
   padding: 10px 18px;
 }
 
 .cta-heading{
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 38px;
+}
+
+.cta-sub-heading{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
