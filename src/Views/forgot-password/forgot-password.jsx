@@ -7,6 +7,7 @@ import {
   useFormik,
 } from 'formik';
 import { BiArrowBack } from 'react-icons/bi';
+import { RiKey2Line } from 'react-icons/ri';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
 import LandingImage from '../../static/assets/img/landing-image.png';
 import LogoImage from '../../static/assets/img/logo-transparent.png';
@@ -46,6 +47,13 @@ function Forgotpassword() {
             <div className="logo-container flex justify-center lg:mb-8 sm:mb-4 lg:mt-0 sm:mt-6 xs:mt-6 ">
               <img src={AeonLogo} alt="aeon-logo" className="lg:w-64 lg:h-16 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
             </div>
+
+            <div className="flex flex-row justify-center md:hidden border border-blue-500 w-full ">
+              <div className="key-wrapper flex flex-col justify-center items-center w-12 h-12 rounded-full bg-indigo-100 border border-red-500">
+                <RiKey2Line className="font-bold text-2xl text-indigo-600 " />
+              </div>
+            </div>
+
             <div className="w-full h-100 lg:px-16 lg:mb-0 xs:mb-14">
               <h1 className="cta-heading xl:mt-8 lg:mt-6 text-center font-semibold text-gray-900 leading-8 text-2xl">Forgot Password?</h1>
               <h2 className="cta-sub-heading sm:text-sm text-gray-500 mt-5 text-center">
