@@ -17,6 +17,29 @@ import LogoImage from '../../static/assets/img/logo-transparent.png';
 
 const SignIn = () => {
   const test = 0;
+
+  const validate = (value) => {
+    const errors = {};
+    if (!value.email) {
+      errors.email = 'Cannot be blank';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value.email)) {
+      errors.email = 'Invalid email format';
+    }
+
+    return errors;
+  };
+
+  const formic = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(`You have loggedin succesfully! Email: ${values.email}`);
+    },
+  });
+
   return (
     <main className="landing-container flex flex-col justify-between">
       <article className="article-matter flex flex-col md:flex-row items-center">
