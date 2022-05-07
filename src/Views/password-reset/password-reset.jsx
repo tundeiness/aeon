@@ -53,7 +53,7 @@ const PasswordReset = () => {
               <div className="key-wrapper flex flex-col justify-center items-center w-14 h-14 rounded-full bg-indigo-100 border border-red-500">
                 <div className="flex flex-col justify-center items-center bg-indigo-300 w-12 h-12 rounded-full">
                   <div className="flex flex-col justify-center items-center bg-indigo-400 w-9 h-9 rounded-full">
-                    <RiKey2Line className="font-bold text-2xl xs:text-3xl text-indigo-600 " />
+                    <FiCheckCircle className="font-bold text-2xl xs:text-3xl text-indigo-600 " />
                   </div>
                 </div>
               </div>
