@@ -23,6 +23,7 @@ module.exports = {
         forgotBlue: '#1756c2',
         buttonBlue: '#0c34ac',
         buttonBlueDeep: '#000B93',
+        link: '#1756c2',
       },
     },
   },
