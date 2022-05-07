@@ -43,7 +43,7 @@ const PasswordReset = () => {
           <div className="section-content-wrap w-full flex flex-col xl:mt-16 lg:mt-20 border border-red-900">
 
             <div className="logo-container flex justify-center xl:mb-0 lg:mb-8 sm:mb-4 lg:mt-0 md:mt-10 sm:mt-10 xs:mt-10 border border-red-900">
-              <img src={AeonLogo} alt="aeon-logo" className="xl:w-56 xl:h-14 lg:w-64 lg:h-16 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
+              <img src={AeonLogo} alt="aeon-logo" className="xl:w-56 xl:h-14 lg:w-56 lg:h-14 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
             </div>
 
             <div className="flex flex-row justify-center border border-blue-500 w-full xl:mt-16 lg:mt-8 md:mt-10 xs:mt-24 xs:mb-4">
