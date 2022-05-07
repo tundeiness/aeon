@@ -122,7 +122,7 @@ const SignIn = () => {
           <img className="absolute bottom-0 w-full object-cover" src={LogoImage} alt="transparent-logo" />
         </section>
       </article>
-      <footer className="hidden lg:block footer-matter py-0 font-medium text-gray-500">
+      <footer className="hidden lg:block footer-matter py-0 font-medium text-sm text-gray-500">
         {' '}
         <span className="inline-block pl-5">&copy;</span>
         <span className="uppercase inline-block pr-3">Credequity 2022</span>
