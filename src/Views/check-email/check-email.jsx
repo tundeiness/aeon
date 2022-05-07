@@ -1,18 +1,22 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import {
   useFormik,
 } from 'formik';
-
+import { BiArrowBack } from 'react-icons/bi';
 import { RiKey2Line } from 'react-icons/ri';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
+import LandingImage from '../../static/assets/img/landing-image.png';
+import LogoImage from '../../static/assets/img/logo-transparent.png';
 
-const ForgotPassword = () => {
+function CheckEmail() {
   const validate = (value) => {
     const errors = {};
+    // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
     if (!value.email) {
       errors.email = 'Cannot be blank';
     } else if (
@@ -86,6 +90,43 @@ const ForgotPassword = () => {
                   )}
                 </div>
 
+                {/* <div className="mt-4">
+                  <label className="block text-gray-700">Password</label>
+                  <input
+                    className={`w-full bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white  focus:outline-none focus:shadow-outline rounded-lg px-4 py-3 ${
+                      formic.password && formic.errors.password
+                        ? 'border-red-300'
+                        : 'border-gray-100'
+                    }`}
+                    onChange={formic.handleChange}
+                    onBlur={formic.handleBlur}
+                    value={formic.values.password}
+                    id="password"
+                    name="password"
+                    type="password"
+                    minLength={8}
+                    placeholder="Enter password"
+                    required
+                  />
+                  {formic.touched.password && formic.errors.password && (
+                  <span className="text-red-400">{formic.errors.password}</span>
+                  )}
+                </div> */}
+
+                {/* <div className="flex flex-row lg:justify-center justify-between w-full mt-12">
+                  <div className="flex md:hidden flex-row">
+                    <input id="remember" className="remember-input mt-2 mr-2" type="checkbox" />
+                    <label
+                      className="label block text-gray-700 text-xs font-medium mt-1"
+                      htmlFor="remember"
+                      id="remember-label"
+                    >
+                      Remember for 30 days
+                    </label>
+                  </div>
+                  <Link className="block font-medium text-forgotBlue hover:text-black focus:text-black focus:outline-none" to="/forgot-password">Forgot Password</Link>
+                </div> */}
+
                 <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Reset Password</button>
                 <div className="back-to-login flex flex-row mt-8 justify-center border border-red-600">
                   <Link className="text-gray-500" to="/">
@@ -97,9 +138,21 @@ const ForgotPassword = () => {
             </div>
           </div>
         </section>
+
+        {/* <section className="relative banner-section hidden md:w-1/2 lg:block">
+          <div className="relative image-wrapper w-full">
+            <img src={LandingImage} alt="landing" className="w-full h-full object-cover" />
+          </div>
+          <img className="absolute bottom-0 w-full object-cover" src={LogoImage} alt="transparent-logo" />
+        </section> */}
       </article>
+      {/* <footer className="hidden lg:block footer-matter py-0 font-medium text-gray-500">
+        {' '}
+        <span className="inline-block pl-5">&copy;</span>
+        <span className="uppercase inline-block pr-3">Credequity 2022</span>
+      </footer> */}
     </main>
   );
-};
+}
 
-export default ForgotPassword;
+export default CheckEmail;
