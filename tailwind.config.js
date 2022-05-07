@@ -22,6 +22,7 @@ module.exports = {
         gray900: '#101828',
         forgotBlue: '#1756c2',
         buttonBlue: '#0c34ac',
+        buttonBlueDeep: '#000B93',
       },
     },
   },
