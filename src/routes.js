@@ -8,6 +8,7 @@ const LoginView = lazy(() => import('./Views/sign-in/SignIn'));
 const ForgotPasswordView = lazy(() => import('./Views/forgot-password/forgot-password'));
 const CheckEmailView = lazy(() => import('./Views/check-email/check-email'));
 const NewPasswordView = lazy(() => import('./Views/new-password/new-password'));
+const PasswordResetView = lazy(() => import('./Views/password-reset/password-reset'));
 
 // const AppRouter = () => {
 //   const element = useRoutes([
@@ -76,6 +77,13 @@ const routes = [
     element: <NewPasswordView />,
     protected: false,
     title: 'New Password',
+    exact: true,
+  },
+  {
+    path: '/password-reset',
+    element: <PasswordResetView />,
+    protected: false,
+    title: 'Password Reset',
     exact: true,
   },
 
