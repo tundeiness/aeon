@@ -42,8 +42,8 @@ function Forgotpassword() {
   return (
     <main className="forgot-container flex flex-col justify-between">
       <article className="article-matter flex flex-col items-center justify-center">
-        <section className="login-section bg-white flex  md:mx-auto md-mx-0 md:max-w-md lg:max-w-full w-full md:w-1/2 px-6 lg:px-16 xl:px-20 xl:mx-10 lg:h-screen border border-red-700">
-          <div className="section-content-wrap w-full flex flex-col lg:mt-28 lg:mb-20 border border-red-900">
+        <section className="login-section bg-white flex lg:h-screen md:mx-auto md-mx-0 md:max-w-md lg:max-w-full w-full md:w-1/2 px-6  xl:px-20 xl:mx-10 lg:px-4 lg:mx-2 border border-blue-700">
+          <div className="section-content-wrap w-full flex flex-col lg:mt-28 border border-red-900">
 
             <div className="logo-container flex justify-center lg:mb-8 sm:mb-4 lg:mt-0 sm:mt-24 xs:mt-24 border border-red-900">
               <img src={AeonLogo} alt="aeon-logo" className="lg:w-64 lg:h-16 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
@@ -59,9 +59,9 @@ function Forgotpassword() {
               </div>
             </div>
 
-            <div className="w-full h-100 lg:px-16 lg:mb-0 xs:mb-14">
+            <div className="w-full h-100 xl:px-16 lg:px-16 lg:mb-0 xs:mb-14">
               <h1 className="cta-heading xl:mt-2 lg:mt-2 text-center font-semibold text-gray-900 leading-8 lg:text-3xl xs:font-semibold ">Forgot Password?</h1>
-              <h2 className="cta-sub-heading sm:text-sm text-gray500 mt-5 text-center lg:font-normal lg:text-lg xs:font-normal xs:leading-6 xs:text-base">
+              <h2 className="cta-sub-heading sm:text-sm text-gray500 mt-5 text-center xl:font-normal xl:text-lg lg:font-normal lg:text-sm xs:font-normal xs:leading-6 xs:text-base">
                 No worries, we&apos;ll send you reset instructions
               </h2>
               <form className="lg:h-0 sm:h-screen mt-6 px-6" onSubmit={formic.handleSubmit}>
