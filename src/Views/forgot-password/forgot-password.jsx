@@ -9,6 +9,7 @@ import {
 
 import { RiKey2Line } from 'react-icons/ri';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
+import './forgotpassword.css';
 
 const ForgotPassword = () => {
   const validate = (value) => {
