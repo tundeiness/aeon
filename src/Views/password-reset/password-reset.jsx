@@ -42,7 +42,7 @@ const PasswordReset = () => {
         <section className="check-section bg-white flex lg:h-screen md:mx-auto md-mx-0 md:max-w-md lg:max-w-full w-full md:w-1/2 px-6  xl:px-20 xl:mx-10 lg:px-4 lg:mx-2 border border-blue-700">
           <div className="section-content-wrap w-full flex flex-col xl:mt-16 lg:mt-20 border border-red-900">
 
-            <div className="logo-container flex justify-center xl:mb-0 lg:mb-8 sm:mb-4 lg:mt-0 md:mt-10 sm:mt-10 xs:mt-10 border border-red-900">
+            <div className="logo-container flex justify-center xl:mb-0 lg:mb-8 sm:mb-4 lg:mt-0 md:mt-20 sm:mt-20 xs:mt-20 border border-red-900">
               <img src={AeonLogo} alt="aeon-logo" className="xl:w-56 xl:h-14 lg:w-56 lg:h-14 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
             </div>
 
@@ -57,7 +57,7 @@ const PasswordReset = () => {
             </div>
 
             <div className="w-full h-100 xl:px-16 lg:px-16 lg:mb-0 xs:mb-14">
-              <h1 className="cta-heading xl:mt-2 lg:mt-2 text-center text-gray-900 leading-8 xl:text-3xl lg:text-3xl xl:font-semibold lg:font-semibold xs:font-semibold md:font-semibold md:text-2xl sm:text-2xl xs:text-2xl">Password reset</h1>
+              <h1 className="cta-heading xl:mt-2 lg:mt-2 text-center text-gray-900 leading-8 xl:text-3xl lg:text-3xl xl:font-semibold lg:font-semibold sm:font-semibold xs:font-semibold md:font-semibold md:text-2xl sm:text-2xl xs:text-2xl">Password reset</h1>
               <h2 className="cta-sub-heading text-gray500 mt-5 text-center xl:font-normal xl:text-lg lg:font-normal lg:text-base xs:font-normal xs:leading-6 xs:text-base xl:px-6 lg:px-4 md:px-1 sm:px-3 xs:px-3 md:font-normal md:text-base sm:font-normal sm:text-base outline outline-red-600">
                 Your password has been successfully reset. Click below to log in magically.
               </h2>
