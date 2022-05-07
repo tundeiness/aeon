@@ -6,6 +6,7 @@ import { lazy } from 'react';
 // import MainLayout from './layouts/MainLayout';
 const LoginView = lazy(() => import('./Views/sign-in/SignIn'));
 const ForgotPasswordView = lazy(() => import('./Views/forgot-password/forgot-password'));
+const CheckEmailView = lazy(() => import('./Views/check-email/check-email'));
 
 // const AppRouter = () => {
 //   const element = useRoutes([
@@ -60,6 +61,13 @@ const routes = [
     element: <ForgotPasswordView />,
     protected: false,
     title: 'Forgot Password',
+    exact: true,
+  },
+  {
+    path: '/check-email',
+    element: <CheckEmailView />,
+    protected: false,
+    title: 'Check Email',
     exact: true,
   },
 
