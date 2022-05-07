@@ -30,12 +30,12 @@ const ForgotPassword = () => {
       email: '',
     },
     validate,
-    onSubmit: (values) => {
-      alert(`You have loggedin succesfully! Email: ${values.email}`);
-    },
+    // onSubmit: (values) => {
+    //   alert(`You have loggedin succesfully! Email: ${values.email}`);
+    // },
   });
 
-  console.log(formic.values);
+  // console.log(formic.values);
   return (
     <main className="forgot-container flex flex-col justify-between">
       <article className="article-matter flex flex-col items-center justify-center">
