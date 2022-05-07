@@ -9,10 +9,8 @@ import {
 import { BiArrowBack } from 'react-icons/bi';
 import { RiKey2Line } from 'react-icons/ri';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
-import LandingImage from '../../static/assets/img/landing-image.png';
-import LogoImage from '../../static/assets/img/logo-transparent.png';
 
-function CheckEmail() {
+const CheckEmail = () => {
   const validate = (value) => {
     const errors = {};
     // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -153,6 +151,6 @@ function CheckEmail() {
       </footer> */}
     </main>
   );
-}
+};
 
 export default CheckEmail;
