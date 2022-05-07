@@ -64,7 +64,7 @@ const CheckEmail = () => {
               <h2 className="cta-sub-heading sm:text-sm text-gray500 mt-5 text-center xl:font-normal xl:text-lg lg:font-normal lg:text-sm xs:font-normal xs:leading-6 xs:text-base">
                 We sent a password reset to link to paul@credequity.com
               </h2>
-              <form className="lg:h-0 sm:h-screen mt-6 px-6" onSubmit={formic.handleSubmit}>
+              <form className="lg:h-0 sm:h-screen mt-6 xl:px-6 lg:px-6 sm:px-4" onSubmit={formic.handleSubmit}>
                 {/* <div>
                   <label className="block text-gray-700">Email</label>
                   <input
@@ -128,9 +128,9 @@ const CheckEmail = () => {
                 </div> */}
 
                 <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Open email app</button>
-                <div className="flex flex-row justify-center xl:mt-8  border border-red-700">
+                <div className="flex flex-row justify-center xl:mt-8 lg:mt-8 md:mt-6 sm:mt-6 xs:mt-6 border border-red-700">
                   <p className="text-base text-gray-500 pr-2">
-                    Didn&apos;t recieve the email
+                    Didn&apos;t recieve the email?
                     {' '}
                   </p>
                   <Link className="inline-block text-link" to="/forgot-password">click to resend</Link>
