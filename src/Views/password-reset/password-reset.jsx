@@ -3,9 +3,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  useFormik,
-} from 'formik';
 import { FiCheckCircle } from 'react-icons/fi';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
 
