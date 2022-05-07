@@ -45,11 +45,11 @@ const NewPassword = () => {
         <section className="check-section bg-white flex lg:h-screen md:mx-auto md-mx-0 md:max-w-md lg:max-w-full w-full md:w-1/2 px-6  xl:px-20 xl:mx-10 lg:px-4 lg:mx-2 border border-blue-700">
           <div className="section-content-wrap w-full flex flex-col xl:mt-16 lg:mt-20 border border-red-900">
 
-            <div className="logo-container flex justify-center xl:mb-0 lg:mb-8 sm:mb-4 lg:mt-0 sm:mt-24 xs:mt-24 border border-red-900">
+            <div className="logo-container flex justify-center xl:mb-0 lg:mb-8 sm:mb-4 lg:mt-0 md:mt-10 sm:mt-10 xs:mt-10 border border-red-900">
               <img src={AeonLogo} alt="aeon-logo" className="lg:w-64 lg:h-16 sm:w-56 sm:h-14 xs:w-56 xs:h-14" />
             </div>
 
-            <div className="flex flex-row justify-center border border-blue-500 w-full xl:mt-10 lg:mt-8 md:mt-10 xs:mt-16 xs:mb-4">
+            <div className="flex flex-row justify-center border border-blue-500 w-full xl:mt-10 lg:mt-8 md:mt-10 xs:mt-24 xs:mb-4">
               <div className="key-wrapper flex flex-col justify-center items-center w-14 h-14 rounded-full bg-indigo-100 border border-red-500">
                 <div className="flex flex-col justify-center items-center bg-indigo-300 w-12 h-12 rounded-full">
                   <div className="flex flex-col justify-center items-center bg-indigo-400 w-9 h-9 rounded-full">
@@ -60,8 +60,8 @@ const NewPassword = () => {
             </div>
 
             <div className="w-full h-100 xl:px-16 lg:px-16 lg:mb-0 xs:mb-14">
-              <h1 className="cta-heading xl:mt-2 lg:mt-2 text-center font-semibold text-gray-900 leading-8 lg:text-3xl xs:font-semibold md:font-semibold md:text-2xl">Set new password</h1>
-              <h2 className="cta-sub-heading sm:text-sm text-gray500 mt-5 text-center xl:font-normal xl:text-lg lg:font-normal lg:text-sm xs:font-normal xs:leading-6 xs:text-base xl:px-4 lg:px-4 md:px-1 md:font-normal outline outline-red-600">
+              <h1 className="cta-heading xl:mt-2 lg:mt-2 text-center font-semibold text-gray-900 leading-8 lg:text-3xl xs:font-semibold md:font-semibold md:text-2xl sm:text-2xl xs:text-2xl">Set new password</h1>
+              <h2 className="cta-sub-heading sm:text-sm text-gray500 mt-5 text-center xl:font-normal xl:text-lg lg:font-normal lg:text-sm xs:font-normal xs:leading-6 xs:text-base xl:px-4 lg:px-4 md:px-1 sm:px-3 xs:px-3 md:font-normal outline outline-red-600">
                 Your new password must be different to previously used passwords.
               </h2>
               <form className="lg:h-0 sm:h-screen mt-6 xl:px-6 lg:px-6 sm:px-4" onSubmit={formic.handleSubmit}>
