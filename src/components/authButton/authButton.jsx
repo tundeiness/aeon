@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -10,5 +11,13 @@ function AuthButton({
     <div>authButton</div>
   );
 }
+
+AuthButton.propTypes = {
+  type: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  loading: PropTypes.bool.isRequired,
+  className: PropTypes.string.isRequired,
+};
 
 export default AuthButton;
