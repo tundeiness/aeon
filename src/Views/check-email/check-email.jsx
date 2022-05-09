@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -5,6 +6,7 @@ import {
 } from 'formik';
 import { HiOutlineMail } from 'react-icons/hi';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
+import AuthButton from '../../components/authButton/authButton';
 
 const CheckEmail = () => {
   const validate = (value) => {
@@ -56,7 +58,8 @@ const CheckEmail = () => {
               </h2>
               <form className="lg:h-0 sm:h-screen mt-6 xl:px-6 lg:px-6 sm:px-4" onSubmit={formic.handleSubmit}>
 
-                <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Open email app</button>
+                {/* <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Open email app</button> */}
+                <AuthButton buttonType="submit" buttonText="Open email app" />
                 <div className="flex flex-row justify-center xl:mt-8 lg:mt-8 md:mt-6 sm:mt-6 xs:mt-6">
                   <p className="text-base text-gray-500 pr-2">
                     Didn&apos;t recieve the email?
