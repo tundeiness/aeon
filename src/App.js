@@ -9,6 +9,7 @@ import './App.css';
 // import { HiMail } from 'react-icons/hi';
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import PageLoader from './components/pageLoader/pageLoader';
 // import { GiPadlockOpen } from 'react-icons/gi';
 // import { CgCopyright } from 'react-icons/cg';
 // import {
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <>
       {/* <Router /> */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<PageLoader />}>
         <Routes>
           {routes.map((route) => (
             <Route key={route.id} {...route} />
