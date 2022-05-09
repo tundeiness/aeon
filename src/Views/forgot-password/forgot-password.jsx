@@ -65,10 +65,10 @@ const ForgotPassword = () => {
                 <div>
                   <label className="block text-gray-700">Email</label>
                   <input
-                    className={`w-full bg-white mt-2 border border-gray-400 focus:border-blue-500 focus:bg-white  focus:outline-none focus:shadow-outline rounded-lg px-4 py-3 ${
+                    className={`w-full bg-white mt-2 border focus:border-blue-500 focus:bg-white  focus:outline-none focus:shadow-outline rounded-lg px-4 py-3 ${
                       formic.email && formic.errors.email
                         ? 'border-red-400'
-                        : 'border-gray-100'
+                        : 'border-gray-300'
                     } `}
                     onChange={formic.handleChange}
                     onBlur={formic.handleBlur}
