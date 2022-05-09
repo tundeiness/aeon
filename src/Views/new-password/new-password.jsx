@@ -58,7 +58,7 @@ const NewPassword = () => {
                 <div className="mt-4">
                   <label className="block text-gray-700">Password</label>
                   <input
-                    className={`w-full bg-white mt-2 border border-gray-300 focus:border-blue-500 focus:bg-white  focus:outline-none focus:shadow-outline rounded-lg px-4 py-3 ${
+                    className={`w-full bg-white mt-2 border focus:border-blue-500 focus:bg-white  focus:outline-none focus:shadow-outline rounded-lg px-4 py-3 ${
                       formic.password && formic.errors.password
                         ? 'border-red-300'
                         : 'border-gray-300'
