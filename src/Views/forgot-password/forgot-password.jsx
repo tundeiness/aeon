@@ -9,6 +9,7 @@ import {
 
 import { RiKey2Line } from 'react-icons/ri';
 import AeonLogo from '../../static/assets/img/logo-blue.png';
+import AuthButton from '../../components/authButton/authButton';
 import './forgotpassword.css';
 
 const ForgotPassword = () => {
@@ -87,7 +88,8 @@ const ForgotPassword = () => {
                   )}
                 </div>
 
-                <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Reset Password</button>
+                {/* <button className="sign-in-button w-full block bg-buttonBlueDeep text-white hover:bg-blue-700 px-4 py-3 mt-8 rounded-lg font-medium focus:bg-blue-700 focus:outline-none" type="submit">Reset Password</button> */}
+                <AuthButton buttonType="submit" buttonText="Reset Password" />
                 <div className="back-to-login flex flex-row mt-8 justify-center">
                   <Link className="text-gray-500" to="/">
                     <span className="back-arrow inline-block pr-2 text-md">&larr;</span>
