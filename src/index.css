@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@layer base {
+  header {
+    /* @apply */
+  }
+
+  p{
+    /* @apply bg-indigo-600 p-4 hover:text-white hover:underline decoration-1 */
+  }
+}
